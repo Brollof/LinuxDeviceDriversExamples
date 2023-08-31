@@ -8,8 +8,6 @@ MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Brolaf");
 MODULE_DESCRIPTION("Hello world");
 
-#define MAJOR_NUMBER    101
-#define FIRST_DEV       MKDEV(MAJOR_NUMBER, 0)
 #define DEVICE_NAME     "my_dev"
 #define CLASS_NAME      "my_class"
 #define DEV_COUNT       1
