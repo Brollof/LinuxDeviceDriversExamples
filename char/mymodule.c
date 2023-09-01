@@ -126,7 +126,7 @@ class_error:
     cdev_del(&devs);
     unregister_chrdev_region(device_number, DEV_COUNT);
 
-    return 0;
+    return -1;
 }
 
 static void __exit ModuleExit(void)
@@ -135,7 +135,7 @@ static void __exit ModuleExit(void)
     device_destroy(my_class, device_number);
     class_destroy(my_class);
     cdev_del(&devs);
-    unregister_chrdev_region(MKDEV(MAJOR_NUMBER, 0), DEV_COUNT);
+    unregister_chrdev_region(device_number, DEV_COUNT);
 }
 
 module_init(ModuleInit);
