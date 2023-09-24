@@ -119,3 +119,11 @@ module_init(ModuleInit);
 module_exit(ModuleExit);
 
 // sudo mknod /dev/irq_signal c 64 0
+
+/*
+ * To automatically load kenerl module:
+ * 1. sudo make install
+ * 2. vim /etc/modules
+ * 3. sudo depmod
+ * 4. reboot
+ */
